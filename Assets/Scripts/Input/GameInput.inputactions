@@ -19,7 +19,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "99b9c396-6efd-4735-bf54-dadad78c4954",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -70,7 +70,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Teleport",
+                    "name": "SetOrTeleport",
                     "type": "Button",
                     "id": "f8279830-34a0-4aa2-aba1-bd3962b97e59",
                     "expectedControlType": "",
@@ -556,11 +556,11 @@
                 {
                     "name": "",
                     "id": "b43d12ab-6d81-4f51-84eb-8f0a0e659e98",
-                    "path": "<Keyboard>/leftCtrl",
+                    "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyboardMouse",
-                    "action": "Teleport",
+                    "action": "SetOrTeleport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private AdvancedMoveController moveController;
     private Rigidbody rb;
     private DashController dashController;
+    private RecallController recallController;
     
     // Movement state
     private Vector3 moveDirection;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
 
         TryGetComponent(out playerInput);
         TryGetComponent(out dashController);
+        TryGetComponent(out recallController);
 
         // Cache component references
         moveController = GetComponent<AdvancedMoveController>();
@@ -130,6 +132,15 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.Instance.IsShowingPauseMenu && dashController)
             dashController.TryStartDash(moveDirection);
+    }
+
+    /// <summary>
+    /// Handle recall input from the input system
+    /// </summary>
+    void OnSetOrTeleport()
+    {
+        if (!GameManager.Instance.IsShowingPauseMenu && recallController)
+            recallController.SetOrTeleport();
     }
 
     void OnCameraOrbit(InputValue inputVal)
